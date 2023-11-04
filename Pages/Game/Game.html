@@ -12,6 +12,44 @@
 
 <body>
 
+
+    <button class="button-31" role="button" id="homeButton">HOMEPAGE</button>
+
+    <div class="mainDiv">
+        <!-- header -->
+        <div class="header">
+            <img src="../../Assets/SPEED TYPE CHALLENGE.png" alt="" height="70px">
+
+            <div class="timer">TIME LEFT: <span id="timertext" style="color: #00FF0E;">60s</span>
+            </div>
+        </div>
+
+        <p id="welcomeText">"Type the following within 60 seconds”</p>
+        <div id="game" tabindex="0">
+            <div id="words">
+
+            </div>
+            <div id="cursor"></div>
+            <div id="focus-error">Click here to focus</div>
+        </div>
+        <div class="nav-buttons">
+            <button class="newgamebutton buttons" role="button">NEW GAME</button>
+            <button class="backButton buttons" role="button">STOP GAME</button>
+        </div>
+
+
+    </div>
+
 </body>
 
 </html>
+
+<script>
+    document.querySelector(".backButton").onclick = () => {
+        window.location.href = "../Result/PracticeResult.html";
+    }
+    document.getElementById("homeButton").onclick = () => {
+        window.location.href = "../Menu/Menu.html"
+    }
+</script>
+<script src="typing.js"></script>
