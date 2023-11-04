@@ -1,0 +1,32 @@
+@font-face {
+    font-family: MrRobot;
+    src: url(../../Assets/MR\ ROBOT.ttf);
+}
+
+@font-face {
+    font-family: LilitaOne;
+    src: url(../../Assets/LilitaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoMono;
+    src: url(../../Assets/RobotoMono-VariableFont_wght.ttf);
+}
+
+
+/* Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background: url(../../Assets/Background.png);
+    background-size: 100vw 100vh;
+    display: flex;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Robot - Type Speed Challenge</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+    <section class="main">
+        <div class="stack1">
+            <h2>WELCOME <span id="player-name">SARVESH</span>!</h2>
+            <div class="menu">
+                <button id="startGame">
+                    <h3>PLAY GAME</h3>
+                </button>
+                <button id="instructionButton">
+                    <h3>INSTRUCTIONS</h3>
+                </button>
+                <button id="aboutButton">
+                    <h3>ABOUT</h3>
+                </button>
+                <button id="restartButton">
+                    <h3>RESTART</h3>
+                </button>
+            </div>
+        </div>
+        <div class="stack2">
+            <div class="alltimebest">
+                <h2>ALL TIME BEST</h2>
+                <div class="scores">
+                    <div class="accuracydiv">
+                        <div class="blue">
+                            <div class="white">95%</div>
+                        </div>
+                    </div>
+                    <div class="speeddiv">
+                        <div class="green">
+                            <div class="white">51.82<br>wpm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
+
+<script>
+    document.getElementById("instructionButton").onclick = () => {
+        window.location.href = "../Instructions/Instructions.html";
+    }
+    document.getElementById("aboutButton").onclick = () => {
+        window.location.href = "../About/About.html"
+    }
+
+    document.getElementById("restartButton").onclick = () => {
+        window.location.href = "../../index.html"
+    }
+    document.getElementById("startGame").onclick = () => {
+        window.location.href = "../Game/Mode.html"
+    }
+</script>
