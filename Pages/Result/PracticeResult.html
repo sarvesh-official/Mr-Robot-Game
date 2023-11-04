@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Robot - Type Speed Challenge</title>
+    <link rel="stylesheet" href="Result.css">
+    <link rel="shortcut icon" href="../../icon2.png">
+
+</head>
+
+<body>
+    <button class="button-31" role="button" id="homeButton">HOMEPAGE</button>
+
+    <div class="mainDiv">
+        <div class="headingandtimer">
+            <img src="../../Assets/result.png" alt="" height="70px">
+        </div>
+
+        <p id="resultText">"Here is you typing performance!”</p>
+        <div class="scoreDiv">
+            <div class="accuracydiv">
+                <div class="blue">
+                    <div class="white">95%</div>
+                </div>
+            </div>
+            <div class="speeddiv">
+                <div class="green">
+                    <div class="white">51.82<br>wpm</div>
+                </div>
+            </div>
+            <div class="mistakediv">
+                <div class="red">
+                    <div class="white">6</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button class="retryButton buttons" role="button"><img src="../../Assets/retry.png" alt=""
+                    height="20px">RETRY</button>
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector(".retryButton").onclick = () => {
+        window.location.href = "../Practice Mode/Practice.html"
+    }
+
+    document.querySelector("#homeButton").onclick = () => {
+        window.location.href = "../Menu/Menu.html"
+    }
+
+</script>

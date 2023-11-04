@@ -25,8 +25,159 @@
 body {
     background: url(../../Assets/Background.png);
     background-size: 100vw 100vh;
-    display: flex;
     background-repeat: no-repeat;
-    justify-content: center;
     align-items: center;
+}
+
+/* Back Button */
+.button-31 {
+    background-color: #000000;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: LilitaOne;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1em ;
+    position: absolute;
+    left: 7rem;
+    max-width: none;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 120px;
+
+}
+
+.button-31:hover,
+.button-31:focus {
+    opacity: .75;
+}
+
+
+
+/* Choose Mode Buttons */
+
+
+.button-86 {
+    all: unset;
+    width: 200px;
+    height: 40px;
+    font-size: 26px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-86::after{
+    content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -99999;
+        transition: height .4s;
+}
+.button-86::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition:  all  .4s;
+}
+
+.button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    border: #ff0000 solid;
+    border-radius: 5px;
+}
+
+.button-86::after {
+    transform: translate(10px, 10px);
+    width: 45px;
+    height: 45px;
+    background: url("../../icon.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+.button-86:last-of-type{
+    padding-right: 2rem;
+}
+
+.button-86:hover::before {
+    transform: translate(5%, 20%);
+    /* width: 110%;
+    height: 110%; */
+}
+
+.button-86:hover::after {
+    border-radius: 5px;
+    transform: translate(0, 0);
+    background: #ff0000;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.button-86:active::after {
+    transition: 0s;
+    
+}
+
+
+
+/* Main Div */
+
+
+.maindiv{
+    font-family: LilitaOne;
+    margin-top: 10rem;
+    display: flex;
+    font-weight: 400;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+    height: 100%;
+}
+
+
+.maindiv h1{
+    color: #fff;
+    font-size: 60px;
+    margin-left: 23rem;
+}
+.buttonDiv{
+    display: flex;
+    margin-left: 25rem;
+    gap: 17em;
 }

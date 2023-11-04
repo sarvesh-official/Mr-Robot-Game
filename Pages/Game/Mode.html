@@ -6,11 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mr Robot - Type Speed Challenge</title>
     <link rel="stylesheet" href="Mode.css">
+    <link rel="shortcut icon" href="../../icon2.png">
+
 </head>
 
 <body>
+    <button class="button-31" role="button" id="backbutton">BACK</button>
 
-
+    <section class="maindiv">
+        <h1>CHOOSE MODE</h1>
+        <div class="buttonDiv">
+            <button class="button-86" role="button" id="storyMode">STORY MODE</button>
+            <button class="button-86" role="button" id="practiceMode">PRACTICE MODE</button>
+        </div>
+    </section>
 </body>
 
 </html>
+
+<script>
+    document.getElementById("storyMode").onclick = () => {
+        window.location.href = '../Story Mode/Story.html';
+    }
+
+    document.getElementById("practiceMode").onclick = () => {
+        window.location.href = '../Practice Mode/Practice.html';
+    }
+
+    document.getElementById("backbutton").onclick = () => {
+        window.location.href = "../Menu/Menu.html"
+    }
+
+</script>

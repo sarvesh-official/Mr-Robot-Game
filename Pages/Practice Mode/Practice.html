@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Robot - Type Speed Challenge</title>
+    <link rel="stylesheet" href="Practice.css">
+    <link rel="shortcut icon" href="../../icon2.png">
+
+</head>
+
+<body>
+    <button class="button-31" role="button" id="homeButton">HOMEPAGE</button>
+
+    <div class="mainDiv">
+        <div class="headingandtimer">
+            <img src="../../Assets/SPEED TYPE CHALLENGE.png" alt="" height="70px">
+            <div class="timer">TIME LEFT: <span id="timertext" style="color: #00FF0E;">60s</span>
+            </div>
+        </div>
+
+        <p id="welcomeText">"Welcome to Mr. Robot Type Speed Challenge!”</p>
+        <div class="typingDiv">
+            <p id="typingtext">In today's fast-paced digital world, effective communication is key. Whether you're
+                sending a quick
+                message to a
+                colleague or crafting a lengthy report, the ability to express your thoughts clearly and concisely is a
+                valuable skill.
+                With an average typing speed of 50 words per minute, you can efficiently convey your ideas, respond to
+                emails, and
+                create content with ease. Practice and improve your typing speed, and you'll find yourself navigating
+                the digital
+                landscape with increased efficiency and confidence.</p>
+        </div>
+        <div class="nav-buttons">
+            <button class="startGamebutton buttons" role="button">START GAME</button>
+            <button class="backButton buttons" role="button">PREVIOUS</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector(".backButton").onclick = () => {
+        window.location.href = "../Game/Mode.html";
+    }
+    document.querySelector(".startGamebutton").onclick = () => {
+        window.location.href = "../Game/Game.html"
+    }
+    document.getElementById("homeButton").onclick = () => {
+        window.location.href = "../Menu/Menu.html"
+    }
+</script>
