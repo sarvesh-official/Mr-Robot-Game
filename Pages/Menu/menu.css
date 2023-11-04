@@ -8,7 +8,15 @@
     src: url(../../Assets/LilitaOne-Regular.ttf);
 }
 
+@font-face {
+    font-family: RobotoMono;
+    src: url(../../Assets/RobotoMono-VariableFont_wght.ttf);
+}
 
+@font-face {
+    font-family: Avengers;
+    src: url(../../Assets/AvengeanceMightiestAvenger-837g.ttf);
+}
 /* Default */
 * {
     margin: 0;
@@ -176,3 +184,30 @@ body {
 .accuracydiv p, .speeddiv p{
     margin-top: 1rem;
 }
+
+marquee {
+    position: absolute;
+    font-size: 22px;
+    top: 96vh;
+    font-family: Avengers;
+    background-color: red;
+    color: white;
+    text-align: center;
+    height: 30px;
+    padding-top: 5px; 
+}
+.marquee-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    animation: infinite-slide 30s linear infinite;
+}
+@keyframes infinite-slide {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }}
