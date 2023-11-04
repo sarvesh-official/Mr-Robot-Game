@@ -72,9 +72,9 @@ body {
     flex-direction: column;
     gap: 3.5rem;
     width: 27rem;
-    height: 35.00rem;
+    height: 33.00rem;
     align-items: center;
-    padding-top: 3.5em;
+    padding-top: 3em;
     flex-shrink: 0;
     border-radius: 45px;
     border: 5px solid #FFF;
