@@ -1,0 +1,101 @@
+@font-face {
+    font-family: MrRobot;
+    src: url(./Assets/MR\ ROBOT.ttf);
+}
+@font-face {
+    font-family: LilitaOne;
+    src: url(./Assets/LilitaOne-Regular.ttf);
+}
+
+
+/* Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body{
+    background: url(./Assets/Background.png);
+    background-size:100vw 100vh;
+    
+    display: flex;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading and logo */
+.heading{
+
+    margin-top: 7rem;
+    margin-left: 20rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    width: 52.938rem;
+    height: 16.563rem;
+    flex-shrink: 0;
+}
+.heading #title{
+    color: #FFF;
+        font-family: MrRobot;
+        font-size: 8.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
+
+.heading:hover{
+    transform: scale(1.1);
+        transition: transform 0.1s;
+}
+
+/* Name Input */
+.name-input-div{
+    margin-top: 3.5em;
+    margin-left: 20em;
+}
+#nameinput-field{
+    text-align: center;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: LilitaOne;
+    line-height: normal;
+    border-radius: 10px;
+    background: #FFF;
+    width: 45.004rem;
+    border: solid transparent;
+    height: 7.063rem;
+    flex-shrink: 0;
+}
+
+#nameinput-field::placeholder {
+    color: rgba(0, 0, 0, 0.61);
+    text-align: center;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: LilitaOne;
+    line-height: normal;
+}
+#nameinput-field:focus{
+        transform: scale(1.2);
+        transition: transform 0.1s;
+}
+
+/* Play Button */
+#playButton{
+    height: 100px;
+    cursor: pointer;
+    margin-top: 3.5em;
+    margin-left: 57em;
+    transition: transform 0.1s;
+}
+
+#playButton:hover{
+    transform: scale(1.2);
+}
