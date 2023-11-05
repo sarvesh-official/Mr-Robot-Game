@@ -62,7 +62,7 @@ body {
 
 #welcomeText {
     margin-top: 2.5rem;
-    color: #000000;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 1000;
     font-style: italic;
@@ -186,6 +186,10 @@ body {
     filter:  blur(0);
 }
 
+#game:focus{
+    outline: 0;
+}
+
 #words{
     color: rgba(255, 255, 255, 0.708);
     margin-top: 2.5rem;
@@ -257,10 +261,35 @@ body {
 }
 
 .letter.correct{
-    color: #fff;
+    color: #00FF0E;
 }
 
 .letter.incorrect {
     color: #f55;
 }
 
+#cursor{
+    display: none;
+    width: 3px;
+    height: 24px;
+    background-color: #ffffff;
+    position: fixed;
+    top: 233px;
+    left: 50px;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%   {
+        opacity: 1;}
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#game:focus #cursor{
+    display: block;
+}
