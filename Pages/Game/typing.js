@@ -61,11 +61,12 @@ function getWpm() {
     const incorrectLetters = letters.filter((letter) =>
       letter.className.includes("incorrect")
     );
+    mistakes += incorrectLetters.length;
+    localStorage.setItem("mistakes", mistakes);
     const correctLetters = letters.filter((letter) =>
       letter.className.includes("correct")
     );
-    mistakes = incorrectLetters.length;
-    localStorage.setItem("mistakes", mistakes);
+
     return (
       incorrectLetters.length === 0 && correctLetters.length === letters.length
     );
