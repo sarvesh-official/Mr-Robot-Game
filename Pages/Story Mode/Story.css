@@ -116,7 +116,22 @@ body {
     background: #00FF0E;
     border: 1px solid #00FF0E;
 }
+#video-background {
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 .backButton:hover,
 .backButtontive {
     background-color: #ffffff;

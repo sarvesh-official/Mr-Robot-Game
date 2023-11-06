@@ -19,7 +19,6 @@
 body{
     background: url(./Assets/Background.png);
     background-size:100vw 100vh;
-    
     display: flex;
     background-repeat: no-repeat;
     flex-direction: column;
@@ -40,7 +39,7 @@ body{
     flex-shrink: 0;
 }
 .heading #title{
-    color: #FFF;
+        color: #FFF;
         font-family: MrRobot;
         font-size: 8.75rem;
         font-style: normal;
@@ -60,24 +59,44 @@ body{
 }
 #nameInputField{
     text-align: center;
-    font-size: 70px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 400;
     font-family: LilitaOne;
     line-height: normal;
-    border-radius: 10px;
-    background: #FFF;
-    width: 45.004rem;
-    border: solid transparent;
-    height: 7.063rem;
+    border-radius: 5px;
+    background: #ffffff00;
+    width: 38.004rem;
+    color: #FFF;
+    border: solid #ffffff5e;
+    height: 6.063rem;
     flex-shrink: 0;
+}
+#video-background {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #nameinput-field::placeholder {
-    color: rgba(0, 0, 0, 0.61);
+    color: rgb(255, 255, 255);
     text-align: center;
-    font-size: 70px;
+    font-size: 50px;
     font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 400;
     font-family: LilitaOne;
     line-height: normal;

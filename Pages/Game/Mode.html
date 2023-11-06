@@ -11,7 +11,11 @@
 </head>
 
 <body>
-    <button class="button-31" role="button" id="backbutton">BACK</button>
+    <video autoplay muted loop id="video-background">
+        <source src="../../Assets/Intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button class="button-31" role="button" id="backButton">BACK</button>
 
     <section class="maindiv">
         <h1>CHOOSE MODE</h1>
@@ -33,8 +37,13 @@
         window.location.href = '../Game/Game.html';
     }
 
-    document.getElementById("backbutton").onclick = () => {
+    document.getElementById("backButton").onclick = () => {
         window.location.href = "../Menu/Menu.html"
     }
 
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const gameAudio = new Audio("../../Assets/The Archive.mp3.mp3");
+        gameAudio.play();
+    });
 </script>

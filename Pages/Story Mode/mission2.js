@@ -74,10 +74,10 @@ function displayResult() {
 
   if (incorrectLetters.length === 0) {
     // Redirect to the "won" page if there are no incorrect letters and all words are typed
-    window.location.href = "../Result/StoryResult2.html";
+    window.location.href = "../Result/StoryResult1.html";
   } else {
     // Redirect to the "lose" page
-    window.location.href = "../Result/StoryResult2.html";
+    window.location.href = "../Result/Loose.html";
   }
 }
 
@@ -104,6 +104,8 @@ function newGame() {
 // Listening to Keys
 
 document.getElementById("game").addEventListener("keyup", (ev) => {
+  let gameAudio = new Audio("../../Assets/keyboard.mp3");
+  gameAudio.play();
   const key = ev.key;
   const currentLetter = document.querySelector(".letter.current");
   // Optional Changing Operator ?

@@ -11,6 +11,10 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="video-background">
+        <source src="../../Assets/main.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <section class="main">
         <div class="stack1">
             <h2>Welcome <span id="player-name">SARVESH</span>!</h2>
@@ -92,7 +96,7 @@
     document.getElementById("accuracytext").innerHTML = Math.round(highwpm) + "%"
     document.getElementById("wpmtext").innerHTML = Math.round(highaccuracy) + `<br>WPM`
     document.addEventListener("DOMContentLoaded", function () {
-        const gameAudio = new Audio("/Assets/backgroundsong1.mp3");
+        const gameAudio = new Audio("/Assets/The Archive.mp3");
         gameAudio.play();
     });
 </script>

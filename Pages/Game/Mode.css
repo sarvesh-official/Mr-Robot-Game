@@ -29,7 +29,6 @@ body {
     align-items: center;
 }
 
-/* Back Button */
 .button-31 {
     background-color: #000000;
     border-radius: 4px;
@@ -42,7 +41,7 @@ body {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.5;
-    margin-top: 1em ;
+    margin-top: 5em;
     position: absolute;
     left: 3rem;
     max-width: none;
@@ -66,7 +65,22 @@ body {
     opacity: .75;
 }
 
+#video-background {
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
 
 /* Choose Mode Buttons */
 
@@ -160,7 +174,7 @@ body {
 
 .maindiv{
     font-family: LilitaOne;
-    margin-top: 10rem;
+    margin-top: 5rem;
     display: flex;
     font-weight: 400;
     width: 100%;

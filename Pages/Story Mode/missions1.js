@@ -1,11 +1,3 @@
-// Playing Audio
-// document.addEventListener("DOMContentLoaded", function () {
-//   let bgAudio = new Audio("../../Assets/The Archive.mp3");
-//   bgAudio.play();
-//   bgAudio.loop = true;
-//   bgAudio.volume = 1;
-// });
-// Generating Random Words
 const words =
   "sometimes your reality is a reflection of what you believe If youre sure of something  it can become true by mr robot".split(
     " "
@@ -77,7 +69,7 @@ function displayResult() {
     window.location.href = "../Result/StoryResult1.html";
   } else {
     // Redirect to the "lose" page
-    window.location.href = "../Result/Loose.html    ";
+    window.location.href = "../Result/Loose.html";
   }
 }
 
@@ -104,6 +96,8 @@ function newGame() {
 // Listening to Keys
 
 document.getElementById("game").addEventListener("keyup", (ev) => {
+  let gameAudio = new Audio("../../Assets/keyboard.mp3");
+  gameAudio.play();
   const key = ev.key;
   const currentLetter = document.querySelector(".letter.current");
   // Optional Changing Operator ?
