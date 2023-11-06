@@ -20,7 +20,7 @@
         <div class="header">
             <img src="../../Assets/SPEED TYPE CHALLENGE.png" alt="" height="70px">
 
-            <div class="timer">TIME LEFT: <span id="timertext" style="color: #00FF0E;">60s</span>
+            <div class="timer">TIME LEFT: <span id="timertext" style="color: #00FF0E;"></span>
             </div>
         </div>
 
@@ -50,6 +50,9 @@
     }
     document.getElementById("homeButton").onclick = () => {
         window.location.href = "../Menu/Menu.html"
+    }
+    document.querySelector(".newgamebutton").onclick = () => {
+        window.location.href = "../Game/Game.html"
     }
 </script>
 <script src="typing.js"></script>

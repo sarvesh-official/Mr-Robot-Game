@@ -22,18 +22,27 @@
         <div class="scoreDiv">
             <div class="accuracydiv">
                 <div class="blue">
-                    <div class="white">95%</div>
+                    <div class="white" id="accuracytext"></div>
                 </div>
+                <br>
+                <p>ACCURACY</p>
+
             </div>
             <div class="speeddiv">
                 <div class="green">
-                    <div class="white">51.82<br>wpm</div>
+                    <div class="white" id="wpmtext"></div>
                 </div>
+                <br>
+                <p>SPEED</p>
+
             </div>
             <div class="mistakediv">
                 <div class="red">
-                    <div class="white">6</div>
+                    <div class="white" id="mistaketext"></div>
                 </div>
+                <br>
+                <p>MISTAKES</p>
+
             </div>
         </div>
         <div class="nav-buttons">
@@ -53,7 +62,7 @@
 
 <script>
     document.querySelector(".retryButton").onclick = () => {
-        window.location.href = "../Practice Mode/Practice.html"
+        window.location.href = "../Game/Game.html"
     }
 
     document.querySelector("#homeButton").onclick = () => {
@@ -61,3 +70,4 @@
     }
 
 </script>
+<script src="result.js"></script>

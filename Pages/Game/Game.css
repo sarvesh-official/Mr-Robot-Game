@@ -192,9 +192,9 @@ body {
 
 #words{
     color: rgba(255, 255, 255, 0.708);
-    margin-top: 2.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    margin-top: 2em;
+    padding-left: 2rem;
+    padding-right: 2em;
     font-size: 22px;
     font-weight: 1000;
     filter: blur(5px);
@@ -271,11 +271,11 @@ body {
 #cursor{
     display: none;
     width: 3px;
-    height: 24px;
+    height: 22px;
     background-color: #ffffff;
     position: fixed;
-    top: 233px;
-    left: 50px;
+    top: 236px;
+    left: 37px;
     animation: blink 0.8s infinite;
 }
 
@@ -292,4 +292,19 @@ body {
 
 #game:focus #cursor{
     display: block;
+}
+
+#game.over #words{
+    opacity: 0.5;
+}
+
+#game.over:focus #cursor{
+    display: none;
+}
+#game.over #focus-error {
+    display: none;
+}
+
+#game.over {
+    filter: blur(0px)
 }

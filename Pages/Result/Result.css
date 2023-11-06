@@ -65,7 +65,7 @@ button{
 
 #resultText {
     margin-top: 2.5rem;
-    color: #000000;
+    color: #ffffff;
     font-size: 22px;
     font-weight: 1000;
     font-style: italic;
@@ -188,6 +188,10 @@ button{
     gap: 5rem;
     justify-content: center;
     align-items: center;
+}
+.scoreDiv div{
+    text-align: center;
+    
 }
 
 /* Score Images */
