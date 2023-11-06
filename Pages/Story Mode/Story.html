@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Robot - Type Speed Challenge</title>
+    <link rel="stylesheet" href="Story.css">
+    <link rel="shortcut icon" href="../../icon2.png">
+
+</head>
+
+<body>
+    <button class="button-31" role="button" id="homeButton">HOMEPAGE</button>
+
+    <div class="mainDiv">
+        <div class="typingDiv">
+            <img src="../../Assets/story.png" alt="" height="450px">
+        </div>
+        <div class="nav-buttons">
+            <button class="startGamebutton buttons" role="button">PLAY AUDIO</button>
+            <button class="backButton buttons" role="button">START GAME</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector(".backButton").onclick = () => {
+        window.location.href = "../Story Mode/Mission1.html";
+    }
+
+    document.getElementById("homeButton").onclick = () => {
+        window.location.href = "../Game/Mode.html"
+    }
+</script>
+
+<script src="story.js">
+</script>

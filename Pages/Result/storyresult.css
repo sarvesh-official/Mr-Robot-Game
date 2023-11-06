@@ -1,0 +1,222 @@
+@font-face {
+    font-family: MrRobot;
+    src: url(../../Assets/MR\ ROBOT.ttf);
+}
+
+@font-face {
+    font-family: LilitaOne;
+    src: url(../../Assets/LilitaOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoMono;
+    src: url(../../Assets/RobotoMono-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Avengers;
+    src: url(../../Assets/AvengeanceMightiestAvenger-837g.ttf);
+}
+
+
+/* Default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background: url(../../Assets/background7.jpg);
+    background-size: 100vw 100vh;
+    display: flex;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    /* cursor: url(../../Assets/cursor.png)50 0, pointer !important; */
+}
+
+.mainDiv {
+    margin-top: 5rem;
+    display: flex;
+    width: 1000px;
+    height: 600px;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    padding-top: 2em;
+    font-family: RobotoMono;
+    font-weight: 1000;
+    border-radius: 18px;
+    gap: 140px;
+    border: 4px solid #FFF;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(15px);
+    box-shadow: 16px -10px 5px 0px rgba(255, 255, 255, 0.06);
+    -webkit-box-shadow: 16px -10px 5px 0px rgba(255, 255, 255, 0.06);
+    -moz-box-shadow: 16px -10px 5px 0px rgba(255, 255, 255, 0.06);
+
+}
+
+
+
+
+#resultText {
+    margin-top: 2.5rem;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 1000;
+    font-style: italic;
+}
+
+
+
+
+/* Navigation Button */
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.buttons {
+    margin-top: 25px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+.retryButton {
+    background: #ff0000;
+    border: 1px solid #ff0000;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+.backButton:hover,
+.backButtontive {
+    background-color: #000;
+    background-position: 0 0;
+    color: #ffffff;
+    border: #000;
+}
+
+
+
+.retryButton:hover {
+    background-color: initial;
+    background-position: 0 0;
+    border: #00FF0E solid;
+}
+
+.retryButton:active {
+    opacity: .5;
+}
+
+
+/* Home Page Button */
+.button-31 {
+    background-color: #ff0000;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: LilitaOne;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: none;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 9px;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 130px;
+    position: absolute;
+    z-index: 1;
+    left: 2em;
+    top: 1em;
+
+}
+
+.button-31:hover,
+.button-31:focus {
+    opacity: .75;
+}
+
+
+/* Score Div */
+.scoreDiv {
+
+    display: flex;
+    margin-top: 3rem;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreDiv div {
+    text-align: center;
+
+}
+
+/* Score Images */
+
+
+.scores {
+    display: flex;
+    gap: 5rem;
+    flex-direction: row;
+}
+
+.nextMissionButton{
+    color: white;
+    background-color: #00FF0E;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border: 1px solid #00FF0E;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.nextMissionButton:hover {
+    background-color: initial;
+    background-position: 0 0;
+    border: #00FF0E solid;
+}
+
+.nextMissionButton:active {
+    opacity: .5;
+}

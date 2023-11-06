@@ -17,7 +17,7 @@
     </div>
     <!-- Name Input -->
     <div class="name-input-div">
-        <input type="text" name="" id="nameinput-field" placeholder="ENTER YOUR NAME">
+        <input type="text" name="" id="nameInputField" placeholder="ENTER YOUR NAME">
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 130 130" fill="none" id="playButton">
         <path
@@ -34,4 +34,8 @@
     playButton = document.getElementById("playButton").onclick = () => {
         window.location.href = "./Pages/Menu/Menu.html"
     }
+    document.addEventListener("DOMContentLoaded", function () {
+        const gameAudio = new Audio("/Assets/backgroundsong1.mp3");
+        gameAudio.play();
+    });
 </script>

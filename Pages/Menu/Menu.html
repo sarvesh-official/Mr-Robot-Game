@@ -13,7 +13,7 @@
 <body>
     <section class="main">
         <div class="stack1">
-            <h2>WELCOME <span id="player-name">SARVESH</span>!</h2>
+            <h2>Welcome <span id="player-name">SARVESH</span>!</h2>
             <div class="menu">
                 <button id="startGame">
                     <h3>PLAY GAME</h3>
@@ -35,13 +35,13 @@
                 <div class="scores">
                     <div class="accuracydiv">
                         <div class="blue">
-                            <div class="white">95%</div>
+                            <div class="white" id="accuracytext">95%</div>
                         </div>
                         <p>ACCURACY</p>
                     </div>
                     <div class="speeddiv">
                         <div class="green">
-                            <div class="white">51.82<br>wpm</div>
+                            <div class="white" id="wpmtext">51.82<br>wpm</div>
                         </div>
                         <p>SPEED</p>
                     </div>
@@ -73,4 +73,26 @@
     document.getElementById("startGame").onclick = () => {
         window.location.href = "../Game/Mode.html"
     }
+
+
+    document.getElementById("player-name").innerHTML = localStorage.getItem("playerName")
+
+
+
+    highwpm = 0
+    wpm = localStorage.getItem("wpm")
+    highaccuracy = 0
+    accuracy = localStorage.getItem("accuracy")
+    if (wpm > highwpm) {
+        highwpm = wpm;
+    }
+    if (accuracy > highaccuracy) {
+        highaccuracy = accuracy;
+    }
+    document.getElementById("accuracytext").innerHTML = Math.round(highwpm) + "%"
+    document.getElementById("wpmtext").innerHTML = Math.round(highaccuracy) + `<br>WPM`
+    document.addEventListener("DOMContentLoaded", function () {
+        const gameAudio = new Audio("/Assets/backgroundsong1.mp3");
+        gameAudio.play();
+    });
 </script>

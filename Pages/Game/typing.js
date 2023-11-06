@@ -6,13 +6,18 @@ const words =
 
 const wordsCount = words.length;
 const gameTime = 30 * 1000;
+let wordIndex = 0;
 
 window.timer = null;
 window.gameStart = null;
 
 function randomWord() {
-  const randomIndex = Math.ceil(Math.random() * wordsCount);
-  return words[randomIndex - 1];
+  if (wordIndex < wordsCount) {
+    const currentWord = words[wordIndex];
+    wordIndex++;
+    return currentWord;
+  }
+  return "";
 }
 
 // Adding classname to current elements
@@ -102,6 +107,8 @@ function newGame() {
 // Listening to Keys
 
 document.getElementById("game").addEventListener("keyup", (ev) => {
+  let gameAudio = new Audio("../../Assets/keyboard.mp3");
+  gameAudio.play();
   const key = ev.key;
   const currentLetter = document.querySelector(".letter.current");
   // Optional Changing Operator ?

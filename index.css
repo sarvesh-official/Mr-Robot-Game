@@ -58,7 +58,7 @@ body{
     margin-top: 3.5em;
     margin-left: 20em;
 }
-#nameinput-field{
+#nameInputField{
     text-align: center;
     font-size: 70px;
     font-style: normal;
@@ -82,7 +82,7 @@ body{
     font-family: LilitaOne;
     line-height: normal;
 }
-#nameinput-field:focus{
+#nameInputField:focus{
         transform: scale(1.2);
         transition: transform 0.1s;
 }

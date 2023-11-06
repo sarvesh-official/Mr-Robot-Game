@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Robot - Type Speed Challenge</title>
+    <link rel="stylesheet" href="storyresult.css">
+    <link rel="shortcut icon" href="../../icon2.png">
+
+</head>
+
+<body>
+    <button class="button-31" role="button" id="homeButton">HOMEPAGE</button>
+
+    <div class="mainDiv">
+        <div class="headingandtimer">
+            <img src="../../Assets/result.png" alt="" height="70px">
+        </div>
+
+        <img src="../../Assets/mission2winningtext.png" alt="" height="100px">
+        <!-- <img src="../../Assets/loosingtext.png" alt="" height="100px"> -->
+
+        <div class="nav-buttons">
+            <button class="retryButton buttons" role="button"><img src="../../Assets/retry.png" alt=""
+                    height="20px">RETRY</button>
+            <button class="nextMissionButton buttons" role="button">NEXT MISSION</button>
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector(".retryButton").onclick = () => {
+        window.location.href = "../Story Mode/Mission1.html"
+    }
+    document.querySelector(".nextMissionButton").onclick = () => {
+        window.location.href = "../Story Mode/Mission2.html"
+    }
+    document.querySelector("#homeButton").onclick = () => {
+        window.location.href = "../Menu/Menu.html"
+    }
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const gameAudio = new Audio("../../Assets/won2.mp3");
+        gameAudio.play();
+    });
+</script>

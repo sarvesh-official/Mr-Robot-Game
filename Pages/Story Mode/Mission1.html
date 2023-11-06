@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Robot - Type Speed Challenge</title>
+    <link rel="stylesheet" href="missions.css">
+    <link rel="shortcut icon" href="../../icon2.png">
+
+</head>
+
+<body>
+
+
+    <button class="button-31" role="button" id="homeButton" tabindex="-1">HOMEPAGE</button>
+
+    <div class="mainDiv">
+        <!-- header -->
+        <div class="header">
+            <img src="../../Assets/mission1.png" alt="" height="70px">
+
+            <div class="timer">TIME LEFT: <span id="timertext" style="color: #00FF0E;">30</span>
+            </div>
+        </div>
+
+        <p id="welcomeText">"Type the following paragraph within 30 seconds to diffuse the bomb and save the hostages.”
+        </p>
+        <div id="game" tabindex="0">
+            <div id="words">
+
+            </div>
+            <div id="cursor"></div>
+            <div id="focus-error">Click here to focus</div>
+        </div>
+        <div class="nav-buttons">
+            <button class="newgamebutton buttons" role="button">NEW GAME</button>
+            <button class="backButton buttons" role="button">STOP GAME</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector(".backButton").onclick = () => {
+        window.location.href = "../Result/Loose.html";
+    }
+    document.getElementById("homeButton").onclick = () => {
+        window.location.href = "../Menu/Menu.html"
+    }
+    document.querySelector(".newgamebutton").onclick = () => {
+        window.location.href = "../Story Mode/Mission1.html"
+    }
+</script>
+<script src="missions1.js"></script>
