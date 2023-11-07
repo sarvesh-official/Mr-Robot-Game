@@ -42,15 +42,6 @@ function formatWord(word) {
   formattedWord += "</div>";
   return formattedWord;
 }
-// Testing
-// function formatWord(word) {
-//   let formattedWord = `<div class="word">`;
-//   word.split("").forEach((letter) => {
-//     formattedWord += `<span class="letter">${letter}</span>`;
-//   });
-//   formattedWord += `</div>`;
-//   return formattedWord;
-// }
 
 // Getting WPM
 function getWpm() {
@@ -99,8 +90,7 @@ function newGame() {
   }
   addClass(document.querySelector(".word"), "current");
   addClass(document.querySelector(".letter"), "current");
-  document;
-  getElementById("timertext").innerHTML = gameTime / 1000;
+  document.getElementById("timertext").innerHTML = gameTime / 1000;
   window.timer = null;
 }
 
@@ -124,7 +114,7 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
   }
   console.log({ key, expected });
   // Setting timer for the game
-  if (!window.timer && isLetter) {
+  if (!window.timer) {
     window.timer = setInterval(() => {
       if (!window.gameStart) {
         window.gameStart = new Date().getTime();
@@ -150,13 +140,6 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
         addClass(currentLetter.nextSibling, "current");
       }
     }
-    // If extra letters are entered by the user it is counted as extra
-    // else {
-    //   const incorrectLetter = document.createElement("span");
-    //   incorrectLetter.innerHTML = key;
-    //   incorrectLetter.className = "letter incorrect extra";
-    //   currentWord.append(incorrectLetter);
-    // }
   }
 
   if (isSpace) {
@@ -195,9 +178,6 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
     if (!currentLetter) {
       addClass(currentWord.lastChild, "current");
     }
-    // if (isExtra) {
-    //   currentWord.removeChild(isExtra);
-    // }
   }
 
   // move lines / words
@@ -213,6 +193,7 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
   const cursor = document.getElementById("cursor");
   cursor.style.top =
     (nextLetter || nextWord).getBoundingClientRect().top + -78 + "px";
+  console.log((nextLetter || nextWord).getBoundingClientRect().top);
   cursor.style.left =
     (nextLetter || nextWord).getBoundingClientRect()[
       nextLetter ? "left" : "right"

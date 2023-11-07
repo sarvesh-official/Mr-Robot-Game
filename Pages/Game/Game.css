@@ -306,9 +306,11 @@ body {
 }
 
 #game:focus #cursor{
-    display: block;
+    display: none;
 }
-
+#game:focus .current{
+    color: #000;
+}
 #game.over #words{
     opacity: 0.5;
 }
