@@ -106,28 +106,29 @@ body {
     touch-action: manipulation;
 }
 
-.button-86::after{
+.button-86::after {
     content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index: -99999;
-        transition: height .4s;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: height .4s;
 }
+
 .button-86::before {
     content: '';
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: -99999;
-    transition:  all  .4s;
+    transition: all .4s;
 }
 
 .button-86::before {
     transform: translate(0%, 0%);
     width: 100%;
     height: 100%;
-    background:transparent;
+    background: transparent;
     border: #ff0000 solid;
     border-radius: 5px;
 }
@@ -142,14 +143,14 @@ body {
     -webkit-backdrop-filter: blur(5px);
     border-radius: 50px;
 }
-.button-86:last-of-type{
+
+.button-86:last-of-type {
     padding-right: 2rem;
 }
 
 .button-86:hover::before {
     transform: translate(5%, 20%);
-    /* width: 110%;
-    height: 110%; */
+
 }
 
 .button-86:hover::after {
@@ -164,7 +165,7 @@ body {
 
 .button-86:active::after {
     transition: 0s;
-    
+
 }
 
 
@@ -172,7 +173,7 @@ body {
 /* Main Div */
 
 
-.maindiv{
+.maindiv {
     font-family: LilitaOne;
     margin-top: 5rem;
     display: flex;
@@ -185,13 +186,69 @@ body {
 }
 
 
-.maindiv h1{
+.maindiv h1 {
     color: #fff;
     font-size: 60px;
     margin-left: 23rem;
 }
-.buttonDiv{
+
+.buttonDiv {
     display: flex;
     margin-left: 25rem;
     gap: 17em;
+}
+
+@media (max-width: 852px) {
+
+
+    /*landscape orientation */
+    body {
+        width: 100vh;
+        height: 100vw;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    #video-background {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .button-31 {
+        line-height: 1.5;
+        margin-top: 3em;
+        left: 1rem;
+        font-size: 15px;
+        width: 100px;
+
+    }
+
+    /* Main Div */
+
+
+    .maindiv {
+        font-family: LilitaOne;
+        margin-top: 2rem;
+        display: flex;
+        font-weight: 400;
+        width: 800px;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        margin-left: 2rem;
+    }
+
+    .maindiv h1 {
+        color: #fff;
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    .buttonDiv {
+        display: flex;
+        gap: 15em;
+        margin-left: 0;
+    }
 }

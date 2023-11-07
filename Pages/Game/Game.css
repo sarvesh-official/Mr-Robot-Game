@@ -174,7 +174,7 @@ body {
 }
 
 /* Typing Div */
-#game{
+#game {
     position: relative;
     margin-top: 1rem;
     line-height: 35px;
@@ -182,15 +182,15 @@ body {
     overflow: hidden;
 }
 
-#game:focus #words{
-    filter:  blur(0);
+#game:focus #words {
+    filter: blur(0);
 }
 
-#game:focus{
+#game:focus {
     outline: 0;
 }
 
-#words{
+#words {
     color: rgba(255, 255, 255, 0.708);
     margin-top: 2em;
     padding-left: 2rem;
@@ -198,7 +198,7 @@ body {
     font-size: 22px;
     font-weight: 1000;
     filter: blur(5px);
-    
+
 }
 
 
@@ -239,13 +239,14 @@ body {
     opacity: .75;
 }
 
-.word{
+.word {
     display: inline-block;
-    margin: 0 5px;}
+    margin: 0 5px;
+}
 
 /* Focus Error */
 /* Inset */
-#focus-error{
+#focus-error {
     position: absolute;
     inset: 0;
     font-size: 30px;
@@ -256,17 +257,18 @@ body {
 
 
 
-#game:focus #focus-error{
+#game:focus #focus-error {
     display: none;
 }
 
-.letter.correct{
+.letter.correct {
     color: #00FF0E;
 }
 
 .letter.incorrect {
     color: #f55;
 }
+
 #video-background {
 
     position: fixed;
@@ -283,7 +285,8 @@ body {
     padding: 0;
     overflow: hidden;
 }
-#cursor{
+
+#cursor {
     display: none;
     width: 3px;
     height: 22px;
@@ -295,33 +298,199 @@ body {
 }
 
 @keyframes blink {
-    0%   {
-        opacity: 1;}
-    50%{
+    0% {
+        opacity: 1;
+    }
+
+    50% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
 
-#game:focus #cursor{
+#game:focus #cursor {
     display: none;
 }
-#game:focus .current{
+
+#game:focus .current {
     color: #000;
 }
-#game.over #words{
+
+#game.over #words {
     opacity: 0.5;
 }
 
-#game.over:focus #cursor{
+#game.over:focus #cursor {
     display: none;
 }
+
 #game.over #focus-error {
     display: none;
 }
 
 #game.over {
     filter: blur(0px)
+}
+
+
+@media (max-width: 852px) {
+
+
+    /*landscape orientation */
+    body {
+        height: 100vw;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    #video-background {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #title {
+        height: 50px;
+    }
+
+    /* Timer */
+    .header {
+
+        gap: 7rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .timer {
+        align-self: center;
+        height: 20px;
+        margin-top: -0.5rem;
+        width: 120px;
+        font-size: 15px;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    #welcomeText {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .mainDiv {
+        margin-top: 1rem;
+        display: flex;
+        width: 600px;
+        height: 370px;
+        flex-direction: column;
+        flex-shrink: 0;
+        align-items: center;
+        padding-top: 0.2em;
+        font-family: RobotoMono;
+        font-weight: 1000;
+        border-radius: 18px;
+        border: 4px solid #FFF;
+        background: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(15px);
+        box-shadow: 16px -10px 5px 0px rgba(255, 255, 255, 0.06);
+        -webkit-box-shadow: 16px -10px 5px 0px rgba(255, 255, 255, 0.06);
+        -moz-box-shadow: 16px -10px 5px 0px rgba(255, 255, 255, 0.06);
+
+    }
+
+    .button-31 {
+        background: #ff0000;
+        border: 1px solid #ff0000;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        width: 6rem;
+        cursor: pointer;
+        display: inline-block;
+        font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 10px;
+        min-height: 30px;
+        left: 0.2em;
+        outline: 0;
+        padding: 8px 10px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
+
+    #focus-error {
+        position: absolute;
+        inset: 0;
+        font-size: 25px;
+        text-align: center;
+        padding-top: 60px;
+        color: white;
+    }
+
+    #game {
+        position: relative;
+        line-height: 25px;
+        margin-top: 1em;
+        height: 800px;
+        overflow: hidden;
+    }
+
+    #words {
+        color: rgba(255, 255, 255, 0.708);
+        padding-left: 2rem;
+        padding-right: rem;
+        margin-top: 0;
+        font-size: 18px;
+        text-align: justify;
+        font-weight: 1000;
+        filter: blur(5px);
+
+    }
+
+    /* Navigation Button */
+
+    .nav-buttons {
+        display: flex;
+        height: 40px;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 0;
+        align-self: center;
+        gap: 2rem;
+        margin-right: 0rem;
+    }
+
+    .buttons {
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+        font-size: 10px;
+        font-weight: 800;
+        line-height: 16px;
+        min-height: 40px;
+        outline: 0;
+        padding: 6px 7px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
+
 }

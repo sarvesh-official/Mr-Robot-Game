@@ -177,9 +177,8 @@ body {
 .accuracydiv,.speeddiv{
     height: 180px;
     text-align: center;
-
-
 }
+
 #video-background {
 
     position: fixed;
@@ -226,3 +225,172 @@ marquee {
     100% {
         transform: translateX(-100%);
     }}
+
+
+
+/* Mobile Responsive */
+/* Set landscape orientation for screens up to a certain width (adjust the max-width as needed) */
+@media (max-width: 852px) {
+
+
+    /*landscape orientation */
+    body {
+        width: 100vh;
+        height: 100vw;
+        overflow-x: hidden;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #video-background {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    /* Main */
+    .main {
+            display: flex;
+            width: 100vw;
+            height: 100%;
+            margin-left: 10em;
+            gap: 10em;
+        }
+
+    /* Left Side Menu */
+    
+    .stack1 {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0.4rem;
+            margin-left: 16rem;
+        }
+    .stack1 h2 {
+            margin-top: 2rem;
+            color: #FFF;
+            text-align: center;
+            font-family: LilitaOne;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+    }
+    /* Main Menu */
+        .menu {
+            margin-top: 0.6rem;
+            font-family: LilitaOne;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 14rem;
+            height: 17.00rem;
+            align-items: center;
+            padding-top: 1em;
+            flex-shrink: 0;
+            border-radius: 35px;
+            border: 5px solid #FFF;
+            background: rgba(0, 0, 0, 0.13);
+            backdrop-filter: blur(8.5px);
+            box-shadow: rgba(255, 255, 255, 0.4) -5px 5px, rgba(255, 255, 255, 0.3) -10px 10px, rgba(255, 255, 255, 0.2) -15px 15px, rgba(255, 255, 255, 0.1) -20px 20px, rgba(255, 255, 255, 0.05) -25px 25px;
+    
+        }
+        .menu button {
+            border-radius: 10px;
+            border: solid transparent;
+            font-family: LilitaOne;
+            width: 12em;
+            height: 3em;
+            flex-shrink: 0;
+                }
+        .menu button h3 {
+            font-size: 20px;
+                
+        }
+        .alltimebest {
+            font-family: LilitaOne;
+            width: 18rem;
+            height: 13rem;
+            justify-content: center;
+            align-items: center;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            color: #ffff;
+            gap: 1em;
+            display: flex;
+            padding-top: 1rem;
+            font-size: large;
+            flex-direction: column;
+            flex-shrink: 0;
+            border-radius: 45px;
+            border: 5px solid #FFF;
+            background: rgba(0, 0, 0, 0.13);
+            backdrop-filter: blur(8.5px);
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        
+        }
+        .alltimebest h2{
+            margin-top: 2rem;
+        }
+        .green {
+            background-color: #84DD63;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            color: #84DD63;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        .blue {
+            background-color: #00C3FF;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            color: #00C3FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                
+        }
+        
+        .white {
+            display: flex;
+            background-color: white;
+            width: 80px;
+            -webkit-text-stroke-width: 0px;
+            height: 80px;
+            font-size: 20px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+                
+        }
+        
+        .accuracydiv,
+        .speeddiv {
+                text-align: center;
+            
+            }
+                marquee {
+                    position: absolute;
+                    font-size: 12px;
+                    top: 96vh;
+                    left: 0px;
+                    font-family: Avengers;
+                    background-color: red;
+                    color: white;
+                    text-align: center;
+                    height: 25px;
+                    padding-top: 2px;
+                }
+        
+                .marquee-text {
+                    position: absolute;
+                    top: 0;
+                    left: 0;}
+
+}
