@@ -1,17 +1,19 @@
-// Generating Random Words
+// Generating Random // Generating an array of words from a given text Words
 const words =
   "in a world where shadows and screens intertwine a digital vigilante emerges they go by many names but are best known as mr robot the digital realm is their playground and they play the game by their own rules but this world is not a simple dichotomy of good and evil mr robot with their enigmatic intentions challenges our perception of justice".split(
     " "
   );
 
 const wordsCount = words.length;
-const gameTime = 30 * 1000;
 let wordIndex = 0;
 
+// timer values
+const gameTime = 30000;
 window.timer = null;
 window.gameStart = null;
 
-function randomWord() {
+// Generating words to append
+function generateWords() {
   if (wordIndex < wordsCount) {
     const currentWord = words[wordIndex];
     wordIndex++;
@@ -20,17 +22,17 @@ function randomWord() {
   return "";
 }
 
-// Adding classname to current elements
+// Adding className to current elements
 function addClass(el, name) {
   el.className += " " + name;
 }
-// Removing classname to current elements
 
+// Removing className to current elements
 function removeClass(el, name) {
   el.className = el.className.replace(name, "");
 }
 
-// Formatting the Words
+// Function to format a word for display
 
 function formatWord(word) {
   let formattedWord = "<div class='word'>";
@@ -43,8 +45,8 @@ function formatWord(word) {
   return formattedWord;
 }
 
-// Getting WPM
-function getWpm() {
+// Function to calculate and store WPM, mistakes, and accuracy
+function getResults() {
   const words = [...document.querySelectorAll(".word")];
   const lastTypedWord = document.querySelector(".word.current");
   const lastTypedWordIndex = words.indexOf(lastTypedWord) + 1;
@@ -78,7 +80,7 @@ function getWpm() {
 function gameOver() {
   clearInterval(window.timer);
   addClass(document.getElementById("game"), "over");
-  getWpm();
+  getResults();
   window.location.href = "../Result/PracticeResult.html";
 }
 
@@ -86,7 +88,7 @@ function gameOver() {
 function newGame() {
   document.getElementById("words").innerHTML = "";
   for (let i = 0; i < 200; i++) {
-    document.getElementById("words").innerHTML += formatWord(randomWord());
+    document.getElementById("words").innerHTML += formatWord(generateWords());
   }
   addClass(document.querySelector(".word"), "current");
   addClass(document.querySelector(".letter"), "current");
