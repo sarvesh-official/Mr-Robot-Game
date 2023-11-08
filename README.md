@@ -1,6 +1,6 @@
 # Mr. Robot Type Speed Challenge
 
-![Game Thumbnail](Assets/thumbnail.jpg)
+![Game Thumbnail](Assets/thumnail.jpg)
 
 Mr. Robot Type Speed Challenge is an exciting typing game that immerses you in the world of hacking while honing your typing skills. It features two distinct modes: Story Mode and Practice Mode, allowing you to track your progress with performance metrics.
 
