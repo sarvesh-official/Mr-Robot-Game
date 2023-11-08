@@ -69,7 +69,12 @@ function getResults() {
       incorrectLetters.length === 0 && correctLetters.length === letters.length
     );
   });
-  const accuracy = (correctWords.length / typedWords.length) * 100;
+  let accuracy;
+  if (correctWords.length == 0) {
+    accuracy = 0;
+  } else {
+    accuracy = (correctWords.length / typedWords.length) * 100;
+  }
   localStorage.setItem("accuracy", accuracy);
 
   const wpm = (correctWords.length / gameTime) * 60000;
@@ -87,7 +92,7 @@ function gameOver() {
 // New Game
 function newGame() {
   document.getElementById("words").innerHTML = "";
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < wordsCount; i++) {
     document.getElementById("words").innerHTML += formatWord(generateWords());
   }
   addClass(document.querySelector(".word"), "current");
@@ -97,7 +102,6 @@ function newGame() {
 }
 
 // Listening to Keys
-
 document.getElementById("game").addEventListener("keyup", (ev) => {
   let gameAudio = new Audio("../../Assets/keyboard.mp3");
   gameAudio.play();
@@ -114,7 +118,6 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
   if (document.querySelector("#game.over")) {
     return;
   }
-  console.log({ key, expected });
   // Setting timer for the game
   if (!window.timer) {
     window.timer = setInterval(() => {
@@ -181,27 +184,9 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
       addClass(currentWord.lastChild, "current");
     }
   }
-
-  // move lines / words
-  if (currentWord.getBoundingClientRect().top > 400) {
-    const words = document.getElementById("words");
-    const margin = parseInt(words.style.marginTop || "0px");
-    words.style.marginTop = margin - 30 + "px";
-  }
-
-  // move the cursor
-  const nextLetter = document.querySelector(".letter.current");
-  const nextWord = document.querySelector(".word.current");
-  const cursor = document.getElementById("cursor");
-  cursor.style.top =
-    (nextLetter || nextWord).getBoundingClientRect().top + -78 + "px";
-  console.log((nextLetter || nextWord).getBoundingClientRect().top);
-  cursor.style.left =
-    (nextLetter || nextWord).getBoundingClientRect()[
-      nextLetter ? "left" : "right"
-    ] +
-    -275 +
-    "px";
 });
-
 newGame();
+document.querySelector(".backButton").onclick = () => {
+  getResults();
+  window.location.href = "../Result/PracticeResult.html";
+};

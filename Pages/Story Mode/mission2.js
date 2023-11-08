@@ -66,19 +66,23 @@ function displayResult() {
   const lastTypedWordIndex = words.indexOf(lastTypedWord) + 1;
   const typedWords = words.slice(0, lastTypedWordIndex);
 
-  const incorrectLetters = typedWords.flatMap((word) =>
-    [...word.children].filter((letter) =>
+  const correctWords = typedWords.filter((word) => {
+    const letters = [...word.children];
+    const incorrectLetters = letters.filter((letter) =>
       letter.className.includes("incorrect")
-    )
-  );
+    );
 
-  if (incorrectLetters.length === 0) {
-    // Redirect to the "won" page if there are no incorrect letters and all words are typed
-    window.location.href = "../Result/StoryResult1.html";
-  } else {
-    // Redirect to the "lose" page
-    window.location.href = "../Result/Loose.html";
-  }
+    const correctLetters = letters.filter((letter) =>
+      letter.className.includes("correct")
+    );
+    if (incorrectLetters.length === 0 && typedWords.length === wordsCount) {
+      // Redirect to the "won" page if there are no incorrect letters and all words are typed
+      window.location.href = "../Result/StoryResult2.html";
+    } else {
+      // Redirect to the "lose" page
+      window.location.href = "../Result/Loose.html";
+    }
+  });
 }
 
 // Game over
@@ -91,7 +95,7 @@ function gameOver() {
 // New Game
 function newGame() {
   document.getElementById("words").innerHTML = "";
-  for (let i = 0; i < 200; i++) {
+  for (let i = 0; i < wordsCount + 1; i++) {
     document.getElementById("words").innerHTML += formatWord(randomWord());
   }
   addClass(document.querySelector(".word"), "current");
@@ -102,7 +106,6 @@ function newGame() {
 }
 
 // Listening to Keys
-
 document.getElementById("game").addEventListener("keyup", (ev) => {
   let gameAudio = new Audio("../../Assets/keyboard.mp3");
   gameAudio.play();
@@ -147,13 +150,6 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
         addClass(currentLetter.nextSibling, "current");
       }
     }
-    // If extra letters are entered by the user it is counted as extra
-    // else {
-    //   const incorrectLetter = document.createElement("span");
-    //   incorrectLetter.innerHTML = key;
-    //   incorrectLetter.className = "letter incorrect extra";
-    //   currentWord.append(incorrectLetter);
-    // }
   }
 
   if (isSpace) {
@@ -192,30 +188,10 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
     if (!currentLetter) {
       addClass(currentWord.lastChild, "current");
     }
-    // if (isExtra) {
-    //   currentWord.removeChild(isExtra);
-    // }
   }
-
-  // move lines / words
-  // if (currentWord.getBoundingClientRect().top > 400) {
-  //   const words = document.getElementById("words");
-  //   const margin = parseInt(words.style.marginTop || "0px");
-  //   words.style.marginTop = margin - 30 + "px";
-  // }
-
-  // move the cursor
-  const nextLetter = document.querySelector(".letter.current");
-  const nextWord = document.querySelector(".word.current");
-  const cursor = document.getElementById("cursor");
-  cursor.style.top =
-    (nextLetter || nextWord).getBoundingClientRect().top + -78 + "px";
-  cursor.style.left =
-    (nextLetter || nextWord).getBoundingClientRect()[
-      nextLetter ? "left" : "right"
-    ] +
-    -275 +
-    "px";
 });
 
 newGame();
+document.querySelector(".backButton").onclick = () => {
+  displayResult()();
+};
