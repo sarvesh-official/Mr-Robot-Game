@@ -44,8 +44,9 @@
     playButton = document.getElementById("playButton").onclick = () => {
         window.location.href = "./Pages/Menu/Menu.html"
     }
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("click", function () {
         const gameAudio = new Audio("/Assets/backgroundsong1.mp3");
+        gameAudio.currentTime = 12;
         gameAudio.play();
     });
 </script>

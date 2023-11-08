@@ -141,7 +141,7 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
     if (currentLetter) {
       addClass(currentLetter, key == expected ? "correct" : "incorrect");
       removeClass(currentLetter, "current");
-      if ((currentLetter.nextSibling, "current")) {
+      if (currentLetter.nextSibling) {
         addClass(currentLetter.nextSibling, "current");
       }
     }

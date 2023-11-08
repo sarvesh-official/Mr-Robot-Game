@@ -163,7 +163,7 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
       });
     }
     removeClass(currentWord, "current");
-    addClass(currentWord.nextSibling, "current");
+    addClass(currentWord.nextSibling);
     if (currentLetter) {
       removeClass(currentLetter, "current");
     }
