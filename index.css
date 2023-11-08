@@ -188,7 +188,7 @@ body {
 
     /* Play Button */
     #playButton {
-        height: 60px;
+        height: 40px;
         cursor: pointer;
         margin-top: 2.5em;
         transition: transform 0.1s;

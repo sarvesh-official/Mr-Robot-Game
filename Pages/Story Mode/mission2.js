@@ -1,11 +1,4 @@
-// Playing Audio
-// document.addEventListener("DOMContentLoaded", function () {
-//   let bgAudio = new Audio("../../Assets/The Archive.mp3");
-//   bgAudio.play();
-//   bgAudio.loop = true;
-//   bgAudio.volume = 1;
-// });
-// Generating Random Words
+// Generating Words
 const words =
   "Sometimes your reality is a reflection of what you believe. If you're sure of something, it can become true".split(
     " "
@@ -49,15 +42,6 @@ function formatWord(word) {
   formattedWord += "</div>";
   return formattedWord;
 }
-// Testing
-// function formatWord(word) {
-//   let formattedWord = `<div class="word">`;
-//   word.split("").forEach((letter) => {
-//     formattedWord += `<span class="letter">${letter}</span>`;
-//   });
-//   formattedWord += `</div>`;
-//   return formattedWord;
-// }
 
 // Getting Result
 function displayResult() {
@@ -100,12 +84,12 @@ function newGame() {
   }
   addClass(document.querySelector(".word"), "current");
   addClass(document.querySelector(".letter"), "current");
-  document;
-  getElementById("timertext").innerHTML = gameTime / 1000;
+  document.getElementById("timertext").innerHTML = gameTime / 1000;
   window.timer = null;
 }
 
 // Listening to Keys
+
 document.getElementById("game").addEventListener("keyup", (ev) => {
   let gameAudio = new Audio("../../Assets/keyboard.mp3");
   gameAudio.play();
@@ -146,7 +130,7 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
     if (currentLetter) {
       addClass(currentLetter, key == expected ? "correct" : "incorrect");
       removeClass(currentLetter, "current");
-      if ((currentLetter.nextSibling, "current")) {
+      if (currentLetter.nextSibling) {
         addClass(currentLetter.nextSibling, "current");
       }
     }
@@ -163,7 +147,7 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
       });
     }
     removeClass(currentWord, "current");
-    addClass(currentWord.nextSibling);
+    addClass(currentWord.nextSibling, "current");
     if (currentLetter) {
       removeClass(currentLetter, "current");
     }
@@ -193,5 +177,5 @@ document.getElementById("game").addEventListener("keyup", (ev) => {
 
 newGame();
 document.querySelector(".backButton").onclick = () => {
-  displayResult()();
+  displayResult();
 };
